@@ -34,6 +34,9 @@ name<- as.data.frame(vdc)[-1,] %>%
          y = c(1.9,1.9, 1.9),
          nam=c("uvGWAS","", "mvGWAS"))
 
+df.venn <- data.frame(x = c(0, 1),
+                      y = c(1, 1),
+                      labels = c('uvGWAS', 'mvGWAS'))
 
 p<- ggplot(df.venn, aes(x0 = x, y0 = y, r = 0.8, fill = labels)) +
   geom_circle(alpha = .3, size = 1, colour = 'grey') +
